@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int bitNumber(int n, int i){
+    int mask;
+    mask=(1<<i)&n;
+    return mask;
+}
+
+int main() {
+    int n;
+    int i;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    printf("\nEnter the ith bit to check:" );
+    scanf("%d",&i);
+
+    printf("The %d bit is set to %d",i,bitNumber(n,i));
+}
