@@ -1,0 +1,25 @@
+#include <stdio.h>
+void setBit(int n, int i){
+    int mask;
+    mask=(1<<i)|n;
+    if(mask==n)
+    {
+        printf("Already set");
+    }
+    else
+    {
+        printf("Set now\n");
+        printf("The new number after setting is %d",mask);
+    }
+}
+
+int main() {
+    // Write C code here
+    int n;
+    int i;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    printf("\nEnter the ith bit to set:" );
+    scanf("%d",&i);
+    setBit(n,i);
+}
