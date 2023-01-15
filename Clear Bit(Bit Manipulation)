@@ -1,0 +1,20 @@
+#include <stdio.h>
+int clearBit(int n, int i){
+    int mask;
+    mask=~(1<<i);
+    int res=n&mask;
+    return res;
+}
+
+int main() {
+    // Write C code here
+    int n;
+    int i,ans;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    printf("\nEnter the ith bit to set:" );
+    scanf("%d",&i);
+    ans=clearBit(n,i);
+    printf("\nThe new number after clearing %dth bit is: ",i);
+    printf("%d",ans);
+}
