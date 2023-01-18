@@ -1,0 +1,30 @@
+#include <stdio.h>
+int fact(int n){
+    if(n==1 || n==0){
+        return 1;
+    }
+    return n*fact(n-1);
+}
+
+int trailingZeroes(int n)
+{
+    int res=0;
+    for(int i=5;i<=n;i=i*5){
+        res=res+n/i;
+    }
+    return res;
+}
+int main() {
+    // Write C code here
+    int num;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    int f;
+    f=fact(num);
+    printf("%d",f);
+    int r;
+    printf("\n");
+    r=trailingZeroes(num);
+    printf("%d",r);
+    return 0;
+}
